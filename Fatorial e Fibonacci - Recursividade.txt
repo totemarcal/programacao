@@ -1,0 +1,62 @@
+Fatorial usando For
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {		
+	int i, n, total;
+	printf("Digite um numero N: ");
+	scanf("%d", &n);
+	total = n;
+	for(i=n-1;i>0;i--){
+		total = total * i;
+	}
+	printf("\nTotal : %d", total);
+	return 0;
+}
+
+
+
+Fatorial usando Recursividade
+
+#include <stdio.h>
+#include <stdlib.h>
+int factorial(int n);
+int main(int argc, char *argv[]) {		
+	int n;
+	printf("Digite um numero N: ");
+	scanf("%d", &n);
+	printf("Fatorial de %d eh %d", n, factorial(n));
+	return 0;
+}
+
+int factorial(int n){
+	if(n==1)
+		return 1;
+	else
+		return n * factorial(n-1);
+}
+
+
+Fatorial Fibonacci
+
+#include <stdio.h>
+#include <stdlib.h>
+int fibonacci(int n);
+int main(int argc, char *argv[]) {		
+	int n;
+	printf("Digite um numero N: ");
+	scanf("%d", &n);
+	printf("Fibonacci de %d eh %d", n, fibonacci(n));
+	return 0;
+}
+
+int fibonacci(int n){
+	if(n<=2)
+		return 1;
+	else
+		return fibonacci (n-1) + fibonacci(n-2);
+}
+
+
+
